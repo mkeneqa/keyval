@@ -1,0 +1,5 @@
+C:\Users\mkeneqa\Dev\WpfApplication1\Business\bin\Debug\Business.exe.config
+C:\Users\mkeneqa\Dev\WpfApplication1\Business\bin\Debug\Business.exe
+C:\Users\mkeneqa\Dev\WpfApplication1\Business\bin\Debug\Business.pdb
+C:\Users\mkeneqa\Dev\WpfApplication1\Business\obj\Debug\Business.exe
+C:\Users\mkeneqa\Dev\WpfApplication1\Business\obj\Debug\Business.pdb
