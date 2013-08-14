@@ -24,4 +24,3 @@ C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\obj\Debug\KeyVal Alpha.exe.manife
 C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\obj\Debug\KeyVal Alpha.application
 C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\obj\Debug\KeyVal Alpha.exe
 C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\obj\Debug\KeyVal Alpha.pdb
-C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\obj\Debug\KeyValWpf.csprojResolveAssemblyReference.cache

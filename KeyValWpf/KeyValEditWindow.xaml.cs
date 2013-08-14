@@ -11,8 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Data.SqlServerCe;
 using System.Data;
+using System.Data.SQLite;
 
 namespace KeyValWpf
 {
@@ -33,13 +33,13 @@ namespace KeyValWpf
 
         private void DataBindEditWindow()
         {
-            using (SqlCeConnection Conn = new SqlCeConnection(Common.DatabaseConnString))
+            using (SQLiteConnection Conn = new SQLiteConnection(Common.DatabaseConnString))
             {
                 Conn.Open();
                 string cmdString = "Select ID, kvValue, kvKey FROM MyKeys";
-                SqlCeCommand cmd = new SqlCeCommand(cmdString, Conn);
-                
-                SqlCeDataAdapter sda = new SqlCeDataAdapter(cmd);
+                SQLiteCommand cmd = new SQLiteCommand(cmdString, Conn);
+
+                SQLiteDataAdapter sda = new SQLiteDataAdapter(cmd);
                 DataTable dt = new DataTable("MyKeys");
                 sda.Fill(dt);                
                 lstvw_KeyVal.ItemsSource = dt.DefaultView;
@@ -81,18 +81,18 @@ namespace KeyValWpf
 
         private void insertValuesInToDatabase(Values NewVal)
         {
-            using (SqlCeConnection Conn = new SqlCeConnection(Common.DatabaseConnString))
+            using (SQLiteConnection Conn = new SQLiteConnection(Common.DatabaseConnString))
             {
                 Conn.Open();                
 
-                SqlCeCommand cmd = Conn.CreateCommand();
+                SQLiteCommand cmd = Conn.CreateCommand();
                 cmd.CommandText = "INSERT INTO MyKeys(kvKey,kvValue) VALUES(@Key,@Value)";
 
-                SqlCeParameter param = null;
+                SQLiteParameter param = null;
 
-                param = new SqlCeParameter("@Key", NewVal.FirstValue);
+                param = new SQLiteParameter("@Key", NewVal.FirstValue);
                 cmd.Parameters.Add(param);
-                param = new SqlCeParameter("@Value", NewVal.SecondValue);
+                param = new SQLiteParameter("@Value", NewVal.SecondValue);
                 cmd.Parameters.Add(param);
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();                
@@ -107,20 +107,20 @@ namespace KeyValWpf
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
 
-            using (SqlCeConnection Conn = new SqlCeConnection(Common.DatabaseConnString))
+            using (SQLiteConnection Conn = new SQLiteConnection(Common.DatabaseConnString))
             {
                 Conn.Open();
 
-                SqlCeCommand cmd = Conn.CreateCommand();
+                SQLiteCommand cmd = Conn.CreateCommand();
                 cmd.CommandText = "UPDATE MyKeys SET kvKey=@Key,kvValue=@Value WHERE ID=@ID";
 
-                SqlCeParameter param = null;
+                SQLiteParameter param = null;
 
-                param = new SqlCeParameter("@Key", txtKeyEdit.Text.ToString());
+                param = new SQLiteParameter("@Key", txtKeyEdit.Text.ToString());
                 cmd.Parameters.Add(param);
-                param = new SqlCeParameter("@Value", txtValEdit.Text.ToString());
+                param = new SQLiteParameter("@Value", txtValEdit.Text.ToString());
                 cmd.Parameters.Add(param);
-                param = new SqlCeParameter("@ID", RowID);
+                param = new SQLiteParameter("@ID", RowID);
                 cmd.Parameters.Add(param);
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
@@ -136,16 +136,16 @@ namespace KeyValWpf
         {
             //delete from table where id = id in
 
-            using (SqlCeConnection Conn = new SqlCeConnection(Common.DatabaseConnString))
+            using (SQLiteConnection Conn = new SQLiteConnection(Common.DatabaseConnString))
             {
                 Conn.Open();
 
-                SqlCeCommand cmd = Conn.CreateCommand();
+                SQLiteCommand cmd = Conn.CreateCommand();
                 cmd.CommandText = "DELETE FROM MyKeys WHERE ID = @RowID";
 
-                SqlCeParameter param = null;
+                SQLiteParameter param = null;
 
-                param = new SqlCeParameter("@RowID", RowID);
+                param = new SQLiteParameter("@RowID", RowID);
                 cmd.Parameters.Add(param);
             
                 cmd.Prepare();

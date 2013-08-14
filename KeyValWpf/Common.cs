@@ -21,6 +21,6 @@ namespace KeyValWpf
        
         public static string DatabaseDirectory = "~\\Resources\\KeyVal.s3db";
         public static string DBFileLocation = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Resources\KeyVal.s3db";
-        public static string DatabaseConnString = "Data Source = '" + DatabaseDirectory+ "';";
+        public static string DatabaseConnString = "Data Source = " + DBFileLocation;
     }
 }

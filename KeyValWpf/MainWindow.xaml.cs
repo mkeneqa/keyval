@@ -14,7 +14,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Data.SqlServerCe;
 using System.Data.SQLite;
 using System.IO;
 using System.Timers;
@@ -52,19 +51,21 @@ namespace KeyValWpf
         }
 
         private Values GetValuesFromInputKeys(String firstKey, String secondKey)
-        { 
+        {   
+            
             Values myValues = new Values();
-            using (SqlCeConnection Conn = new SqlCeConnection(Common.DatabaseConnString))
+            using (SQLiteConnection Conn = new SQLiteConnection(Common.DatabaseConnString))
             {
                 Conn.Open();
-                SqlCeDataReader rdr = null;
 
-                SqlCeCommand cmd = Conn.CreateCommand();
+                SQLiteDataReader rdr = null;
+
+                SQLiteCommand cmd = Conn.CreateCommand();
                 cmd.CommandText = "SELECT kvValue FROM MyKeys WHERE (kvKey = @firstKey)";
 
-                SqlCeParameter param = null;
+                SQLiteParameter param = null;
 
-                param = new SqlCeParameter("@firstKey", firstKey);
+                param = new SQLiteParameter("@firstKey", firstKey);
                 cmd.Parameters.Add(param);
                 cmd.Prepare();
                 rdr = cmd.ExecuteReader();
@@ -76,10 +77,10 @@ namespace KeyValWpf
                 }
                 
                 //get second value
-                SqlCeCommand cmd2 = Conn.CreateCommand();
+                SQLiteCommand cmd2 = Conn.CreateCommand();
                 cmd2.CommandText = "SELECT kvValue FROM MyKeys WHERE (kvKey = @secondKey)";
 
-                param = new SqlCeParameter("@secondKey",secondKey);
+                param = new SQLiteParameter("@secondKey", secondKey);
                 cmd2.Parameters.Add(param);
 
                 cmd2.Prepare();
@@ -91,7 +92,7 @@ namespace KeyValWpf
                 }
                 
                 Conn.Close();
-                rdr.Close();
+                rdr.Dispose();
             }
 
                return myValues;
@@ -112,6 +113,7 @@ namespace KeyValWpf
 
             blockText.Text = resultValues.FirstValue.ToString() + resultValues.SecondValue.ToString();
             Clipboard.SetText(blockText.Text.ToString());
+            lblDebugResults.Content = "Combination Value Copied to Clipboard!";
         }
 
         private void MenuEdit_KeyVal(object sender, RoutedEventArgs e)
@@ -120,7 +122,17 @@ namespace KeyValWpf
             KeyValEditWindow editWindow = new KeyValEditWindow();
             //editWindow.Show();
             editWindow.ShowDialog();
+            ResetWindow();
+            lblDebugResults.Content = "";
                 
+        }
+
+        private void ResetWindow()
+        {
+            txtKeyIn1.Text = "";
+            txtKeyIn2.Text = "";
+            blockText.Text = "";
+            btnGetValues.IsEnabled = false;
         }
 
         void DeactivateMainWindow(object sender, EventArgs e)
@@ -135,7 +147,20 @@ namespace KeyValWpf
 
         private void getDatabaseDirectory_Click(object sender, RoutedEventArgs e)
         {
-            Clipboard.SetText(Common.DatabaseDirectory);
+            Clipboard.SetText(Common.DBFileLocation);
+            lblDebugResults.Content = "Database File Location Copied to Clipboard!";
+        }
+
+        private void btnClick_ClearAll(object sender, RoutedEventArgs e)
+        {
+            ResetWindow();
+        }
+
+        private void keyup_checkForNulls(object sender, KeyEventArgs e)
+        {
+            if (txtKeyIn1.Text != "" && txtKeyIn2.Text != "")
+                btnGetValues.IsEnabled = true;
+
         }
 
 
