@@ -59,5 +59,15 @@ namespace KeyValWpf.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] KeyVal {
+            get {
+                object obj = ResourceManager.GetObject("KeyVal", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

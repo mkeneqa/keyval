@@ -7,9 +7,6 @@ C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\bin\Debug\KeyVal Alpha.applicatio
 C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\bin\Debug\KeyVal Alpha.exe
 C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\bin\Debug\KeyVal Alpha.pdb
 C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\bin\Debug\System.Data.SQLite.dll
-C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\bin\Debug\System.Data.SQLite.Linq.dll
-C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\bin\Debug\System.Data.SqlServerCe.dll
-C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\bin\Debug\System.Data.SqlServerCe.Entity.dll
 C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\obj\Debug\KeyValEditWindow.baml
 C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\obj\Debug\MainWindow.baml
 C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\obj\Debug\KeyValEditWindow.g.cs
@@ -24,3 +21,5 @@ C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\obj\Debug\KeyVal Alpha.exe.manife
 C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\obj\Debug\KeyVal Alpha.application
 C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\obj\Debug\KeyVal Alpha.exe
 C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\obj\Debug\KeyVal Alpha.pdb
+C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\obj\Debug\KeyValWpf.csprojResolveAssemblyReference.cache
+C:\Users\mkeneqa\Dev\WpfApplication1\KeyValWpf\bin\Debug\System.Data.SQLite.pdb

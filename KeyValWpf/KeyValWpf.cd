@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ClassDiagram Zoom="1" MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="KeyValWpf.Properties.Resources" Collapsed="False">
+    <Position X="0.5" Y="0.5" Width="2.472174" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="KeyValWpf.Properties.Settings" Collapsed="False">
+    <Position X="0.5" Y="3.1" Width="1.828166" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="KeyValWpf.App" Collapsed="False">
+    <Position X="0.5" Y="5.1" Width="1.78443" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="KeyValWpf.Values" Collapsed="False">
+    <Position X="0.5" Y="6.5" Width="1.560646" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="False" />
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="KeyValWpf.Common" Collapsed="False">
+    <Position X="0.5" Y="9.5" Width="2.266876" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="KeyValWpf.MainWindow" Collapsed="False">
+    <Position X="0.5" Y="11.4" Width="2.305695" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+  <Class Name="KeyValWpf.KeyValEditWindow" Collapsed="False">
+    <Position X="0.5" Y="15.9" Width="2.49653" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="False" />
+      <Compartment Name="Fields" Collapsed="False" />
+    </Compartments>
+  </Class>
+</ClassDiagram>

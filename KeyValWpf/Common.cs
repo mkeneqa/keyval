@@ -3,7 +3,6 @@ using System.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using System.Reflection;
 
@@ -18,9 +17,9 @@ namespace KeyValWpf
 
        //string exeFolder = System.IO.Path.GetDirectoryName();
 
-       
+       public static string dmn = AppDomain.CurrentDomain.BaseDirectory;
         public static string DatabaseDirectory = "~\\Resources\\KeyVal.s3db";
-        public static string DBFileLocation = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + @"\Resources\KeyVal.s3db";
-        public static string DatabaseConnString = "Data Source = " + DBFileLocation;
+        public static string DBFileLocation = AppDomain.CurrentDomain.BaseDirectory + @"Resources\KeyVal.s3db";
+        public static string DatabaseConnString = "Data Source = " + AppDomain.CurrentDomain.BaseDirectory + @"Resources\KeyVal.s3db;Version=3;";
     }
 }
