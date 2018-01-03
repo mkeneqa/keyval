@@ -59,8 +59,11 @@ __List Of Changes (The last being the most important I think):__
 * You could also change this to point to another KeyVal.s3db database located in another folder or directory (say a dropbox shared drive or another existing database etc.) if you’d like as long as long as you provide the full path i.e "C:/Users/Mike/My Documents/KeVal.s3db". 
 * If the program gives an error saying it can’t locate the database open the "Change Directory Directory Path" window and it should default to the KeyVal.s3db database within the parent folder when you close the window.
 
-## Wiki Issue Tracker (Fixed. See Trello details below)
-[Known Issues](https://bitbucket.org/mkene927/keyval/wiki/Known%20Issues)
+## Known Issues
+
+__Installation using Parallels (Fixed in Beta 1.0 Release)__
+
+~~When running KeyVal in a directory in Parallels (Windows or Mac) program crashes due to the fact Parallels uses **psf//**** mapping instead full path~~ FIXED!
 
 ## Trello Issue Tracking
 
