@@ -67,4 +67,4 @@ __Installation using Parallels (Fixed in Beta 1.0 Release)__
 
 ## Trello Issue Tracking
 
-Issue Tracking for this project is publicaally setup on Trello: [Trello Link](https://trello.com/b/5P8x8DLU/keyval-app-dev)
+Project Issue Tracking on Trello: [Trello Link](https://trello.com/b/5P8x8DLU/keyval-app-dev)
