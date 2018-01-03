@@ -32,7 +32,7 @@ Say the program asks for 1 and 3... I would then type 1 and 3 into the
 app and it would then return the values qwe and 4n9 and automatically 
 copy qwe4n9 to the clipboard.
 
-##Screenshots
+## Screenshots
 
 __A. Main Screen With Drop Down Edit Menu__
 
